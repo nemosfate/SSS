@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sunshine State Software LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        $("nav").css({"position":"sticky","top":"7vw"});
+      });
+      $(window).resize(function(){
+        location.reload();
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="resources/images/SunshineStateSoftwareLogoBase.png">
+      <div class="sun-effect"></div>
+      <img src="resources/images/SunshineStateSoftwareLogoTop.png" class="overlay">
+    </div>
+    <div class="title-container">
+      <h1>Sunshine State Software</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h3>Strategic Software Solutions</h3>
+      <h5>From Startup to Enterprise Organization</h5>
+        <div class="jumbotron">
+          <div>
+          <p>Software can seem scary. <br/> We're here to help.
+          <a href="#contact"><button>Start here</button></a></p>
+          </div>
+          <div></div>
+        </div>
+      </section>
+  	</div>
+  <nav>
+    <ul>
+      <li><a href="#psa">Professional Services Integration and Automation<div class="mask"><img src="resources/images/psa.png"></div></a></li>
+      <li><a href="#app">Application Design and Authoring<div class="mask"><img src="resources/images/app.png"></div></a></li>
+      <li><a href="#web">Online Presence and Web Design Services<div class="mask"><img src="resources/images/web.png"></div></a></li>
+      <li><a href="#mgd">Marketing and Graphic Design Services<div class="mask"><img src="resources/images/mgd.png"></div></a></li>
+      <li><a href="#dsc">Digital Strategy Consultation Services<div class="mask"><img src="resources/images/dsc.png"></div></a></li>
+    </ul>
+  </nav>
+	<!-- Css Carousel-->
+	<div class="carrousel">
+				<input type="radio" name="slides" id="radio-1" checked>
+				<input type="radio" name="slides" id="radio-2">
+				<input type="radio" name="slides" id="radio-3">
+				<input type="radio" name="slides" id="radio-4">
+				<ul class="slides">
+					 <li class="slide">
+	               <h1>Automation Services</h1>
+								 <p>Industry specific automation tools customized and integrated to your workflow</p>
+	              <span class="author">
+	              <img src="./resources/images/AutomationSSS.jpeg">
+	              </span>
+	           </li>
+	           <li class="slide">
+	                <h1>Application Design</h1>
+									<p>Custom Web and Mobile applications designed to your needs</p>
+	                <span class="author">
+	                  <img src="./resources/images/appSSS.jpeg">
+	                </span>
+	          </li>
+	          <li class="slide">
+							<h1>Web Design</h1>
+	                <p>Your online presence is more than a landing page. Let us help you realize your goals.</p>
+	                <span class="author">
+	                <img src="./resources/images/strategy.jpeg">
+	                </span>
+	          </li>
+	          <li class="slide">
+	            <h1>Graphic Design and Marketing</h1>
+	              <p>We realize your top-level branding into reality.</p>
+	              <span class="author">
+	                <img src="./resources/images/design.jpeg">
+	              </span>
+	           </li>
+				</ul>
+				<div class="slidesNavigation">
+					<label for="radio-1" id="dotForRadio-1"></label>
+					<label for="radio-2" id="dotForRadio-2"></label>
+					<label for="radio-3" id="dotForRadio-3"></label>
+					<label for="radio-4" id="dotForRadio-4"></label>
+				</div>
+	</div>
+
+  </main>
+  <footer>
+		<h6>&copy;SUNSHINESTATE SOFTWARE LLC 2017</h6>
+  </footer>
+</body>
+</html>
