@@ -244,14 +244,26 @@ section p {
   height: 13em;
   max-width: 750px;
   margin: 1rem auto 3rem 7rem;
-	background-image: url("../images/AutomationSSS.jpeg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 69%;
   position: relative;
   overflow: hidden;
 	z-index: 1;
 }
+
+.carousel-1 {
+	background-image: url("../images/AutomationSSS.jpeg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 69%;
+}
+
+.carousel-2 {
+
+	background-image: url("../images/appSSS.jpeg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 69%;
+}
+
 .carousel-1 .slides, .carousel-2 .slides{
   width: 400%;
   padding-left: 0;
