@@ -2,6 +2,10 @@ html {
 	font-size: 1.25vw;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 /*
 html * {
 	border: 1px solid black;
@@ -145,7 +149,6 @@ nav ul {
 nav ul li {
 	height: 2rem;
 	font-size: .85rem;
-	padding: .5%;
 	background-color: rgb(88, 148, 244);
 	width: 15%;
 	border-radius: 15%;
@@ -200,20 +203,56 @@ section p {
 
 
 /* *************TEST CODE***********/
+.section-container {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 390px;
+	grid-gap: 1rem;
+	margin-top: 3rem;
+	margin-bottom: 2rem;
+}
+
+.section-name-1 h1, .section-name-1 p,
+.section-name-2 h1, .section-name-2 p {
+	width: 125%;
+}
+
+.section-name-1 {
+	width: 100%;
+	float: left;
+	margin-top: 25%;
+	text-align: center;
+}
+
+.section-name-2 {
+	width: 100%;
+	float: left;
+	margin-top: 40%;
+	text-align: center;
+}
+
+.carousel-1, .carousel-2 {
+	width: 100%;
+	float: left;
+}
 
 
 /*Carousel*/
-.carrousel{
+.carousel-1, .carousel-2{
   text-align: center;
   padding: 1em 0;
   height: 13em;
   max-width: 750px;
-  margin: 1rem auto 3rem auto;
+  margin: 1rem auto 3rem 7rem;
+	background-image: url("../images/AutomationSSS.jpeg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 69%;
   position: relative;
   overflow: hidden;
 	z-index: 1;
 }
-.carrousel .slides{
+.carousel-1 .slides, .carousel-2 .slides{
   width: 400%;
   padding-left: 0;
   overflow: hidden;
@@ -225,33 +264,31 @@ section p {
   -o-transition: left .75s ease-out;
   transition: left .75s ease-out;
 }
-.carrousel .slides li{
+.carousel-1 .slides li, .carousel-2 .slides li{
   width: 25%;
   position: relative;
   float: left;
 }
-.carrousel li h1{
+.carousel-1 li h1, .carousel-2 li h1{
 	font-size: 1.4em;
 }
-.carrousel li p{
-  max-width: 90%;
-	text-align: center;
-	margin-left: 5%;
-  color: #666666;
-  font-size: .8em;
-  font-weight: bold;
-}
-.carrousel li img{
-  width: 20rem;
-	height: 16rem;
+
+.carousel-1 li img, .carousel-2 li img{
+  width: 35rem;
+	height: 20rem;
   border-radius: 20%;
   vertical-align: middle;
 }
-.carrousel li span.author{
-  margin-top:0.5em;
+.carousel-1 li span.author,
+.carousel-2 li span.author{
+  margin-top: 2em;
+	margin-left: 7rem;
   display: block;
+	width: 67%;
+	text-align: center;
+	color: yellow;
 }
-.carrousel .slidesNavigation{
+.carousel-1 .slidesNavigation, .carousel-2 .slidesNavigation{
   display: block;
   list-style: none;
   text-align: center;
@@ -264,10 +301,10 @@ section p {
     left: 50%; /*Centering de element*/
     margin-left: -52px; /*adjusting the centering by applying a negative margin of half of the width*/
 }
-.carrousel input{
+.carousel-1 input, .carousel input-2{
   display: none;
 }
-.carrousel .slidesNavigation label{
+.carousel-1 .slidesNavigation label, .carousel-2 .slidesNavigation label{
   float: left;
   margin: 6px;
   display: block;
@@ -291,33 +328,48 @@ section p {
 #radio-4:checked ~ .slides{
   left: -300%;
 }
+#radio-1-2:checked ~ .slides{
+  left: 0;
+}
+#radio-2-2:checked ~ .slides{
+  left: -100%;
+}
+#radio-3-2:checked ~ .slides{
+  left: -200%;
+}
+#radio-4-2:checked ~ .slides{
+  left: -300%;
+}
 
-
-.carrousel .slidesNavigation label:hover{
+.carousel-1 .slidesNavigation label:hover, .carousel-2 .slidesNavigation label:hover{
    cursor: pointer;
 }
 /* You have to repeat this with each slide/dot */
-.carrousel #radio-1:checked ~ .slidesNavigation label#dotForRadio-1,
-.carrousel #radio-2:checked ~ .slidesNavigation label#dotForRadio-2,
-.carrousel #radio-3:checked ~ .slidesNavigation label#dotForRadio-3,
-.carrousel #radio-4:checked ~ .slidesNavigation label#dotForRadio-4{
+.carousel-1 #radio-1:checked ~ .slidesNavigation label#dotForRadio-1,
+.carousel-1 #radio-2:checked ~ .slidesNavigation label#dotForRadio-2,
+.carousel-1 #radio-3:checked ~ .slidesNavigation label#dotForRadio-3,
+.carousel-1 #radio-4:checked ~ .slidesNavigation label#dotForRadio-4,
+.carousel-2 #radio-1-2:checked ~ .slidesNavigation label#dotForRadio-1-2,
+.carousel-2 #radio-2-2:checked ~ .slidesNavigation label#dotForRadio-2-2,
+.carousel-2 #radio-3-2:checked ~ .slidesNavigation label#dotForRadio-3-2,
+.carousel-2 #radio-4-2:checked ~ .slidesNavigation label#dotForRadio-4-2{
   background: #2980b9;
 }
 
 @media  (max-width: 796px) {
-  .carrousel{
+  .carousel-1, .carousel-2{
     height: 8.5em;
   }
 }
 @media  (max-width: 480px) {
-  .carrousel li p{
+  .carousel-1 li p, .carousel-2 li p{
     padding-left: 0.5em;
     padding-right: 0.5em;
   }
-  .carrousel li q{
+  .carousel-1 li q, .carousel-2 li q{
       font-size: 1em;
   }
-  .carrousel li img{
+  .carousel-1 li img, .carousel-2 li img{
      width:2em;
      margin-left: -1em;
      margin-right: 0.25em;
