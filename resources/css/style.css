@@ -227,8 +227,19 @@ section p {
 .section-name-2 {
 	width: 100%;
 	float: left;
-	margin-top: 40%;
+	margin-top: 45%;
 	text-align: center;
+}
+
+.section-name-3 {
+	width: 100%;
+	float: left;
+	margin-top: 45%;
+	text-align: center;
+}
+
+.section-name-3 h1 {
+	margin-left: 30%;
 }
 
 .carousel-1, .carousel-2 {
@@ -238,7 +249,7 @@ section p {
 
 
 /*Carousel*/
-.carousel-1, .carousel-2{
+.carousel-1, .carousel-2, .carousel-3 {
   text-align: center;
   padding: 1em 0;
   height: 13em;
@@ -257,14 +268,21 @@ section p {
 }
 
 .carousel-2 {
-
 	background-image: url("../images/appSSS.jpeg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 69%;
 }
 
-.carousel-1 .slides, .carousel-2 .slides{
+.carousel-3 {
+	background-image: url("../images/strategy.jpeg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 69%;
+}
+
+.carousel-1 .slides, .carousel-2 .slides,
+.carousel-3 .slides{
   width: 400%;
   padding-left: 0;
   overflow: hidden;
@@ -276,31 +294,48 @@ section p {
   -o-transition: left .75s ease-out;
   transition: left .75s ease-out;
 }
-.carousel-1 .slides li, .carousel-2 .slides li{
+.carousel-1 .slides li, .carousel-2 .slides li,
+.carousel-3 .slides li {
   width: 25%;
   position: relative;
   float: left;
 }
-.carousel-1 li h1, .carousel-2 li h1{
+.carousel-1 li h1, .carousel-2 li h1,
+.carousel-3 li h1 {
 	font-size: 1.4em;
 }
 
-.carousel-1 li img, .carousel-2 li img{
+.carousel-1 li img, .carousel-2 li img,
+.carousel-3 li img {
   width: 35rem;
 	height: 20rem;
   border-radius: 20%;
   vertical-align: middle;
 }
 .carousel-1 li span.author,
-.carousel-2 li span.author{
-  margin-top: 2em;
+.carousel-2 li span.author,
+.carousel-3 li span.author{
 	margin-left: 7rem;
   display: block;
 	width: 67%;
 	text-align: center;
 	color: yellow;
 }
-.carousel-1 .slidesNavigation, .carousel-2 .slidesNavigation{
+
+.carousel-1 li span.author {
+	margin-top: 2em;
+}
+
+.carousel-2 li span.author {
+	margin-top: 1em;
+}
+
+.carousel-3 li span.author {
+	margin-top: 1em;
+}
+
+.carousel-1 .slidesNavigation, .carousel-2 .slidesNavigation,
+.carousel-3 .slidesNavigation {
   display: block;
   list-style: none;
   text-align: center;
@@ -313,10 +348,12 @@ section p {
     left: 50%; /*Centering de element*/
     margin-left: -52px; /*adjusting the centering by applying a negative margin of half of the width*/
 }
-.carousel-1 input, .carousel input-2{
+.carousel-1 input, .carousel-2 input,
+.carousel-3 input {
   display: none;
 }
-.carousel-1 .slidesNavigation label, .carousel-2 .slidesNavigation label{
+.carousel-1 .slidesNavigation label, .carousel-2 .slidesNavigation label,
+.carousel-3 .slidesNavigation label {
   float: left;
   margin: 6px;
   display: block;
@@ -352,8 +389,22 @@ section p {
 #radio-4-2:checked ~ .slides{
   left: -300%;
 }
+#radio-1-3:checked ~ .slides{
+  left: 0;
+}
+#radio-2-3:checked ~ .slides{
+  left: -100%;
+}
+#radio-3-3:checked ~ .slides{
+  left: -200%;
+}
+#radio-4-3:checked ~ .slides{
+  left: -300%;
+}
 
-.carousel-1 .slidesNavigation label:hover, .carousel-2 .slidesNavigation label:hover{
+.carousel-1 .slidesNavigation label:hover,
+.carousel-2 .slidesNavigation label:hover,
+.carousel-3 .slidesNavigation label:hover {
    cursor: pointer;
 }
 /* You have to repeat this with each slide/dot */
@@ -364,47 +415,30 @@ section p {
 .carousel-2 #radio-1-2:checked ~ .slidesNavigation label#dotForRadio-1-2,
 .carousel-2 #radio-2-2:checked ~ .slidesNavigation label#dotForRadio-2-2,
 .carousel-2 #radio-3-2:checked ~ .slidesNavigation label#dotForRadio-3-2,
-.carousel-2 #radio-4-2:checked ~ .slidesNavigation label#dotForRadio-4-2{
+.carousel-2 #radio-4-2:checked ~ .slidesNavigation label#dotForRadio-4-2,
+.carousel-2 #radio-1-3:checked ~ .slidesNavigation label#dotForRadio-1-3,
+.carousel-2 #radio-2-3:checked ~ .slidesNavigation label#dotForRadio-2-3,
+.carousel-2 #radio-3-3:checked ~ .slidesNavigation label#dotForRadio-3-3,
+.carousel-2 #radio-4-3:checked ~ .slidesNavigation label#dotForRadio-4-3 {
   background: #2980b9;
 }
 
 @media  (max-width: 796px) {
-  .carousel-1, .carousel-2{
+  .carousel-1, .carousel-2, .carousel-3 {
     height: 8.5em;
   }
 }
 @media  (max-width: 480px) {
-  .carousel-1 li p, .carousel-2 li p{
+  .carousel-1 li p, .carousel-2 li p, .carousel-3 li p {
     padding-left: 0.5em;
     padding-right: 0.5em;
   }
-  .carousel-1 li q, .carousel-2 li q{
+  .carousel-1 li q, .carousel-2 li q, .carousel-3 li q {
       font-size: 1em;
   }
-  .carousel-1 li img, .carousel-2 li img{
+  .carousel-1 li img, .carousel-2 li img, .carousel-3 li img {
      width:2em;
      margin-left: -1em;
      margin-right: 0.25em;
   }
 }
-
-
-#PSA {
-  background-image: url(../images/AutomationSSS.png);
-	width: 70%;
-	height:700px;
-	background-repeat: no-repeat;
-}
-
-.apptest {
-	height: 500px;
-	width: 100%;
-}
-
-.apptest img {
-	height: 400px;
-	width: 60%;
-	margin-top: 0px;
-}
-
-/**************END TEST CODE********/
